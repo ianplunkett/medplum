@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// Replace 'your_token_here' with your Medplum API token
 const bearerToken = 'your_token_here';
+
 export function DataFetchingComponent(): JSX.Element {
   const { id } = useParams();
   let config = {
