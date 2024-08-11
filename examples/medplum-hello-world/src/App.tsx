@@ -10,6 +10,8 @@ import { LandingPage } from './pages/LandingPage';
 import { PatientPage } from './pages/PatientPage';
 import { ResourcePage } from './pages/ResourcePage';
 import { SignInPage } from './pages/SignInPage';
+import { DataFetchingComponent } from './components/DataFetchingComponent';
+import { BadDataFetchingComponent } from './components/BadDataFetchingComponent';
 
 export function App(): JSX.Element | null {
   const medplum = useMedplum();
@@ -36,6 +38,8 @@ export function App(): JSX.Element | null {
             <Route path="/signin" element={<SignInPage />} />
             <Route path="/Patient/:id" element={<PatientPage />}>
               <Route index element={<PatientOverview />} />
+              <Route path="datafetchingcomponent" element={<DataFetchingComponent />} />
+              <Route path="baddatafetchingcomponent" element={<BadDataFetchingComponent />} />
               <Route path="overview" element={<PatientOverview />} />
               <Route path="timeline" element={<Timeline />} />
               <Route path="history" element={<PatientHistory />} />
